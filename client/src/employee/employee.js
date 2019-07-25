@@ -36,7 +36,6 @@ class Employee extends Component {
     }
 
 
-
     deleteEmployee = async (id) => {
         try {
             await axios.delete('/employees/${id}')
