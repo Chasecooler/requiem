@@ -10,7 +10,7 @@ class Employee extends Component {
     }
     async componentDidMount () {
         try {
-            const res = awat axios.get("/emplyees")
+            const res = await axios.get('./Emplyees');
             this.setState({
                 employees: res.data
             })
@@ -22,23 +22,24 @@ class Employee extends Component {
     // put methods here
 
     render (){
-        <div>
-            <ul>
-                {this.state.employees.map(el =>{
-                    return <li key={el.EmpID}>Name: {el.Name} EmpCode: {el.EmpCode} Salar: {el.Salary}</li>
-                })}
-            </ul>
-        </div>
-    )
-            } else {
-                return (
+        if (this.state.Employee.length) {
+            return (
+            <div>
+                <ul>
+                    {this.state.employees.map(el =>{
+                        return <li key={el.EmpID}>Name: {el.Name} EmpCode: {el.EmpCode} Salar: {el.Salary}</li>
+                    })}
+                </ul>
+            </div>
+            )
+        } else {
+        return (
                     <div>There aren't any Employees to his List! </div>
                 )
             }
 
         }
     }
-    
-}
 
-export default Employee
+
+export default Employee;
