@@ -8,6 +8,7 @@ class Employee extends Component {
             employees: []
         }
     }
+    // ths is where the lifecyce methods go
     async componentDidMount () {
         try {
             const res = await axios.get('./Emplyees');
