@@ -22,7 +22,7 @@ class Employee extends Component {
 
     // put methods here
 
-    adEmploye = async (event) => {
+    addEmployee = async (event) => {
         event.preventDefault();
         const {Name,EmpCode, Salary} = this.state
         try {
