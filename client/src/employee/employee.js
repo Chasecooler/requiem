@@ -28,14 +28,14 @@ class Employee extends Component {
             <div>
                 <ul>
                     {this.state.employees.map(el =>{
-                        return <li key={el.EmpID}>Name: {el.Name} EmpCode: {el.EmpCode} Salar: {el.Salary}</li>
+                        return <li key={el.EmpID}>Name: {el.Name} EmpCode: {el.EmpCode} Salary: {el.Salary}</li>
                     })}
                 </ul>
             </div>
             )
         } else {
         return (
-                    <div>There aren't any Employees to his List! </div>
+                    <div>There aren't any Employees to this List! </div>
                 )
             }
 
