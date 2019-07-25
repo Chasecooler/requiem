@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'Axios';
+import axios from 'axios';
 
 class Employee extends Component {
     constructor() {
@@ -23,7 +23,7 @@ class Employee extends Component {
     // put methods here
 
     render (){
-        if (this.state.Employee.length) {
+        if (this.state.employees.length) {
             return (
             <div>
                 <ul>
