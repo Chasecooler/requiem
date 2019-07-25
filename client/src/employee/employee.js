@@ -29,6 +29,12 @@ class Employee extends Component {
                 })}
             </ul>
         </div>
+    )
+            } else {
+                return (
+                    <div>There aren't any Employees to his List! </div>
+                )
+            }
 
         }
     }
