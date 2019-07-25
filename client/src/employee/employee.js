@@ -22,6 +22,32 @@ class Employee extends Component {
 
     // put methods here
 
+    adEmploye = async (event) => {
+        event.preventDefault();
+        const {Name,EmpCode, Salary} = this.state
+        try {
+            await axios.post('/employees', {Name, EmpCode, Salary})
+            alert("Employee Added")
+            this.refresh();
+        } catch (error) {
+            console.log(error)
+        }
+        }
+    }
+
+
+
+    deleteEmployee = async (id) => {
+        try {
+            await axios.delete('/employees/${id}')
+            console.log(`ID : ${id} was deleted`)
+            this.refresh();
+        } catch (error) {
+            console.error(error)
+        }
+        }
+    }
+
     render (){
         if (this.state.employees.length) {
             return (
